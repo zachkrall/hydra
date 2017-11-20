@@ -9,8 +9,10 @@ var ctx
 
 function init() {
   //console.log("loaded", document.getElementById('code'))
-  var editor = new Editor()
+
   var vs = new vSynth({networked: true})
+  var editor = new Editor()
+  editor.eval()
 //  const canvasStream = vs.o[0].captureStream()
 
 //  var pbLive = new PatchBay(canvasStream)
