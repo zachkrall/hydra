@@ -21,3 +21,7 @@ html, body {
 textarea {
     background: #000;
 }
+
+canvas {
+  background-color: #f00;
+}
