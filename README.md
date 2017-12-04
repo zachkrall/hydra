@@ -140,3 +140,9 @@ o0.gradient().rotate(0.2).r
  the force
 
  ### Inspiration:
+ Space-time dynamics in video feedback
+ Satellite arts project
+ Eduardo kac
+ Sandin Image Processor
+ Lumen app
+ GEM/vsynth
