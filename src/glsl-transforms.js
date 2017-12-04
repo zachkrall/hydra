@@ -10,6 +10,33 @@ module.exports = {
       c = texture2D(<0>, st);
     `
   },
+  osc: {
+    transformType: 'color',
+    isSource: true,
+    inputs: [
+      {
+        name: 'frequency',
+        type: 'float',
+        default: 60
+      },
+      {
+        name: 'sync',
+        type: 'float',
+        default: 0.2
+      },
+      {
+        name: 'offset',
+        type: 'float',
+        default: 0.0
+      }
+    ],
+    fragBody: `
+      float r<0> = sin((st.x-<2>/100.+time*<1>)*<0>)*0.5 + 0.5;
+      float g<0> = sin((st.x+time*<1>)*<0>)*0.5 + 0.5;
+		  float b<0> = sin((st.x+<2>/100.+time*<1>)*<0>)*0.5 + 0.5;
+      c = vec4(r<0>, g<0>, b<0>, 1.0);
+    `
+  },
   mult: {
     transformType: 'color',
     inputs: [
@@ -251,7 +278,7 @@ rotate: {
   ],
   fragBody: `
     st -= vec2(0.5);
-    st = mat2(cos(<0>*time),-sin(<0>*time), sin(<0>*time),cos(<0>*time))*st;
+    st = mat2(cos(<0>),-sin(<0>), sin(<0>),cos(<0>))*st;
     st += vec2(0.5);
   `
 }

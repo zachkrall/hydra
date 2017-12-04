@@ -1,6 +1,6 @@
-const PatchBay = require('./lib/pb-live.js')
-const vSynth = require('./lib/v-synth.js')
-const Editor = require('./lib/editor.js')
+const PatchBay = require('./src/pb-live.js')
+const vSynth = require('./src/v-synth.js')
+const Editor = require('./src/editor.js')
 
 var ctx
 

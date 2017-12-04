@@ -1,5 +1,5 @@
 const Webcam = require('./webcam.js')
-const Screen = require('./screenmedia.js')
+const Screen = require('./../lib/screenmedia.js')
 
 var Source = function (opts) {
   this.regl = opts.regl
